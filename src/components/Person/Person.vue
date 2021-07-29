@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h3>Cadastro pessoa: {{ nome }}</h3>
-		<Info/>
+		<Info props="Dado envidado via props Person.vue -> Info.vue" :propsBind="propsBind"/>
 		<hr>
 		<Form/>
 	</div>
@@ -19,7 +19,8 @@
 		},
 		data() {
 			return {
-				nome: 'Julio'
+				nome: 'Julio',
+				propsBind: 'Dado enviado por Bind no props'
 			}
 		}
 	}

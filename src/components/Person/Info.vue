@@ -1,5 +1,7 @@
 <template>
 	<div>
+		<p> {{ props }}</p>
+		<p> {{ propsBind }}</p>
 		<p v-if="esta_trabalhando"> v-if Trabalhando</p>
 		<p v-else> v-else não está Trabalhando</p>
 		<ul>
@@ -33,6 +35,10 @@
 				botao: 'Mostra',
 				tecnoligias: ['Java','Kotlin','Python','PHP','Node']
 			}
+		},
+		props:{
+			props: String,
+			propsBind: String,
 		},
 		methods: {
 			showEmail() {
